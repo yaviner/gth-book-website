@@ -1,0 +1,11 @@
+{
+  "name": "hell-book",
+  "version": "0.0.1",
+  "description": "Website for Go to Hell: An Illustrated Guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yair Aviner & Nis Frome",
+  "license": "ISC"
+}

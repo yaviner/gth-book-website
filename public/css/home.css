@@ -1,0 +1,164 @@
+:root {
+	font-size: 16px;
+	font-family: 'Cormorant Garamond', serif;
+}
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.col {
+	flex-basis: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.col-4 {
+	flex-grow: 4;
+}
+
+.col-8 {
+	flex-grow: 8;
+}
+
+.col-10 {
+	flex-grow: 10;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	padding: 10px 100px;
+	padding-bottom: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+nav ul {
+	list-style: none;
+	padding-left: 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+nav ul li {
+	margin-right: 15px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	padding: 10px 100px;
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	justify-content: flex-end;
+	text-align: right;
+	z-index: 0;
+	color: #D32F2F;
+}
+
+footer p {
+	margin: 0;
+}
+
+.full-height {
+	min-height: 100vh;
+	width: 100vw;
+	box-sizing: border-box;
+	padding: 80px;
+}
+.logo {
+	color: #D32F2F;
+	font-size: 1.6rem;
+	font-weight: bold;
+	font-family: 'Kalam', serif;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#top {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	background: white;
+	color: #666;
+}
+
+#top h1 {
+	font-size: 3rem;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	line-height: 3.3rem;
+	font-family: 'Cormorant Garamond', sans-serif;
+}
+
+#top h1 small {
+	font-size: 1.4rem;
+	display: block;
+	color: #999;
+	margin-top: -10px;
+}
+
+#top .main-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.top-cta {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: flex-start;
+}
+
+.cta-input {
+	margin-right: -5px;
+	border: 0;
+	border: 3px solid #D32F2F;
+	font-size: 1.2rem;
+	font-family: 'Kalam', sans-serif;
+	line-height: 44px;
+	padding-left: 10px;
+	outline: 0;
+}
+
+.cta {
+	border-radius: 0;
+	padding: 8px 18px;
+	background-color: #D32F2F;
+	font-weight: bold;
+	border: 3px solid #D32F2F;
+	font-size: 1.2rem;
+	font-family: 'Kalam', sans-serif;
+	color: white;
+	margin-bottom: 25px;
+	transition: all .1s ease-in;
+	cursor: pointer;
+	margin-bottom: 0;
+}
+
+.cta:hover {
+	background: white;
+	color: #D32F2F;
+}
+
+.cta.success {
+	color: white;
+}
+
+p.promo {
+	margin: 0;
+	margin-top: 10px;
+}
