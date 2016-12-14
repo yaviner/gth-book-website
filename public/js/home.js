@@ -22,6 +22,10 @@ $(document).ready(function() {
 		}).then(function(res, e) {
 			console.log(res, e);
 			$btn.text('Subscribed!').addClass('success').off('click');
+			$('p.promo')
+				.fadeOut('fast')
+				.html('Thanks, heathen. Now follow us on Twitter: <a href="https://twitter.com/gotohell" target="_blank">@gotohell</a>')
+				.fadeIn('fast');
 		});
 	});
 
