@@ -85,12 +85,17 @@ footer p {
 	padding: 80px;
 }
 .logo {
+	display: block;
+	text-indent: -9999px;
 	color: #c05844;
 	font-size: 1.6rem;
 	font-weight: bold;
-	font-family: 'Kalam', serif;
 	margin-top: 0;
 	margin-bottom: 0;
+	width: 100px;
+	height: 100px;
+	background-image: url('../img/logo-small.png');
+	background-size: cover;
 }
 
 #top {
