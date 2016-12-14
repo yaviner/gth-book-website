@@ -24,7 +24,7 @@ $(document).ready(function() {
 			$btn.text('Subscribed!').addClass('success').off('click');
 			$('p.promo')
 				.fadeOut('fast')
-				.html('Thanks, heathen. Now follow us on Twitter: <a href="https://twitter.com/gotohell" target="_blank">@gotohell</a>')
+				.html('Thanks, heathen. Now follow us on Twitter: <a href="https://twitter.com/gotohellbook" target="_blank">@gotohellbook</a>')
 				.fadeIn('fast');
 		});
 	});
