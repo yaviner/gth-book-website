@@ -9,16 +9,22 @@ html,
 body {
 	padding: 0;
 	margin: 0;
+	overflow-y: auto;
 }
 
 .col {
 	flex-basis: 0;
 	padding-left: 20px;
 	padding-right: 20px;
+	flex-shrink: 0;
 }
 
 .col-4 {
 	flex-grow: 4;
+}
+
+.col-6 {
+	flex-grow: 6;
 }
 
 .col-8 {
@@ -65,7 +71,7 @@ footer {
 	justify-content: flex-end;
 	text-align: right;
 	z-index: 0;
-	color: #D32F2F;
+	color: #aaa;
 }
 
 footer p {
@@ -90,7 +96,7 @@ footer p {
 #top {
 	display: flex;
 	flex-direction: row;
-	align-items: stretch;
+	align-items: center;
 	background: white;
 	color: #666;
 }
@@ -114,6 +120,9 @@ footer p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+#top .cover-preview {
 }
 
 .top-cta {
@@ -161,4 +170,35 @@ footer p {
 p.promo {
 	margin: 0;
 	margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+	#top {
+		display: block;
+		margin-top: 75px;
+	}
+	.full-height {
+		padding: 25px;
+	}
+	.main-info {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.top-cta {
+		margin: 0 auto;
+		width: 75%;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 900px) {
+	.cta-input {
+		font-size: 1rem;
+		margin-right: -20px;
+		line-height: 39px;
+	}
+	.cta {
+		font-size: 1rem;
+		padding: 8px 4px;
+	}
 }
