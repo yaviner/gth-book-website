@@ -85,7 +85,7 @@ footer p {
 	padding: 80px;
 }
 .logo {
-	color: #D32F2F;
+	color: #c05844;
 	font-size: 1.6rem;
 	font-weight: bold;
 	font-family: 'Kalam', serif;
@@ -135,7 +135,7 @@ footer p {
 .cta-input {
 	margin-right: -5px;
 	border: 0;
-	border: 3px solid #D32F2F;
+	border: 3px solid #c05844;
 	font-size: 1.2rem;
 	font-family: 'Kalam', sans-serif;
 	line-height: 44px;
@@ -146,9 +146,9 @@ footer p {
 .cta {
 	border-radius: 0;
 	padding: 8px 18px;
-	background-color: #D32F2F;
+	background-color: #c05844;
 	font-weight: bold;
-	border: 3px solid #D32F2F;
+	border: 3px solid #c05844;
 	font-size: 1.2rem;
 	font-family: 'Kalam', sans-serif;
 	color: white;
@@ -160,7 +160,7 @@ footer p {
 
 .cta:hover {
 	background: white;
-	color: #D32F2F;
+	color: #c05844;
 }
 
 .cta.success {
