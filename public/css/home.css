@@ -37,7 +37,7 @@ body {
 
 nav {
 	position: absolute;
-	top: 0;
+	top: 20px;
 	width: 100vw;
 	padding: 10px 100px;
 	padding-bottom: 5px;
@@ -63,7 +63,7 @@ nav ul li:last-child {
 
 footer {
 	position: fixed;
-	bottom: 0;
+	bottom: 20px;
 	padding: 10px 100px;
 	display: flex;
 	flex-direction: row;
@@ -184,9 +184,12 @@ p.promo a {
 }
 
 @media (max-width: 700px) {
+	nav {
+		padding: 10px 30px;
+	}
 	#top {
 		display: block;
-		margin-top: 75px;
+		margin-top: 100px;
 	}
 	.full-height {
 		padding: 25px;
