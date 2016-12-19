@@ -68,7 +68,7 @@ footer {
 	display: flex;
 	flex-direction: row;
 	width: 100vw;
-	justify-content: flex-end;
+	justify-content: center;
 	text-align: right;
 	z-index: 0;
 	color: #aaa;
@@ -102,7 +102,6 @@ footer p {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	background: white;
 	color: #666;
 }
 
@@ -128,6 +127,10 @@ footer p {
 }
 
 #top .cover-preview {
+}
+
+#top .cover-preview img {
+	margin-left: 25px;
 }
 
 .top-cta {
@@ -175,6 +178,18 @@ footer p {
 p.promo {
 	margin: 0;
 	margin-top: 10px;
+	transition: opacity 0.2s;
+}
+
+p.promo.thanks {
+	font-weight: bold;
+	font-size: 20px;
+	padding-top: 22px;
+	padding-bottom: 25px;
+}
+
+p.promo.invalid {
+	
 }
 
 p.promo a {

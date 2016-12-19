@@ -3,6 +3,32 @@ $(document).ready(function() {
 	var list_id = 72807
 	var $btn = $('#mail-signup');
 	var $input = $('#email');
+	var $promo = $('p.promo');
+
+	function displayThanks(res, e) {
+		$('.top-cta').hide();
+		$btn.text('Subscribed!').addClass('success').off('click');
+		$promo
+			.css('opacity', '0')
+			.addClass('thanks')
+			.removeClass('invalid animated flash')
+			.html('<br />');
+		setTimeout(function() {
+			$promo
+				.css('opacity', '1')
+				.html('Thanks, heathen! Now follow us on Twitter: <a href="https://twitter.com/gotohellbook" target="_blank">@gotohellbook</a>')
+		}, 0)		
+	}
+
+	function displayInvalid() {
+		$promo
+			.html('Lying is a sin. Please enter a real email address!')
+			.addClass('invalid animated flash');
+
+		setTimeout(function() {
+			$promo.removeClass('animated flash');
+		}, 1000)
+	}
 
 	$btn.on('click', function(e) {
 		e.preventDefault();
@@ -12,6 +38,17 @@ $(document).ready(function() {
 			return false;
 		}
 
+		var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+		if (!email.match(emailRegex)) {
+			displayInvalid();
+			return false;
+		}
+
+		/*setTimeout(function() {
+			displayThanks();
+		}, 600);*/
+
 		$.ajax({
 			method: 'POST',
 			url: 'https://hooks.zapier.com/hooks/catch/1806823/thrq9h/',
@@ -20,12 +57,7 @@ $(document).ready(function() {
 				"email_address": email
 			}
 		}).then(function(res, e) {
-			console.log(res, e);
-			$btn.text('Subscribed!').addClass('success').off('click');
-			$('p.promo')
-				.fadeOut('fast')
-				.html('Thanks, heathen. Now follow us on Twitter: <a href="https://twitter.com/gotohellbook" target="_blank">@gotohellbook</a>')
-				.fadeIn('fast');
+			displayThanks(res, e);
 		});
 	});
 
